@@ -1,0 +1,13 @@
+function[Obj] = GARCH11obj(para, rtn)
+
+T = length(rtn); 
+
+sig2 = zeros(T, 1); 
+
+sig2(1,1) = mean(rtn); 
+
+for t=2:T
+   sig2(t,1) = para'*[1; rtn(t-1); sig2(t-1,1)];    
+end
+
+Obj = (T/2)*log(2*pi) +(1/2)*sum(log(sig2)) + sum(rtn./sig2)/2;
