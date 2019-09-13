@@ -9,3 +9,6 @@ I used MATLAB to clean data and transformed into a stationary time series,  buil
 ## Models and Forecasting
 This paper estimated the performance of AMRA model, checked the volatility and build the conditional heteroscedastic model
 – GARCH model. Finally using ARMA (1,1)—ARCH (1,1) models to forecast unemployment rates for the following 10 years.
+
+## Result
+The forecasting results showed that the ARMA (1,1)—GARCH (1,1) model is effective in the evaluation and simulation of the unemployment rate.
